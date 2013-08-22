@@ -28,10 +28,11 @@ struct trk_channel
 };
 
 
-struct trk_channel *trkchan_alloc(void);
-void trkchan_dealloc(struct trk_channel *trkchan);
+void trkchan_init(void);
+struct trk_channel *trkchan_deploy(struct sv_ctrl *svctrl);
+void trkchan_kill(struct trk_channel *trkchan);
+
 void trkchan_gc(void);
 
-void trkchan_stop(struct trk_channel *trkchan);
 
 ```
