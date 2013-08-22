@@ -12,7 +12,7 @@ struct acq_channel
 };
 
 struct acq_channel *acqchan_deploy(struct sv_ctrl *svctrl);
-void acqchan_kill(struct sv_ctrl *svctrl);
+void acqchan_kill(struct acq_channel *acqchan);
 
 void acqchan_gc(void);
 
