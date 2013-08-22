@@ -5,7 +5,7 @@
 digraph G
 {
   node [shape = record];
-  svchan [label = "{ struct sv_channel | ... }"];
+  svctrl [label = "{ struct sv_ctrl | ... }"];
 
   trkchan [label = "{ struct trk_channel | ... }"];
   bitsync [label = "{ struct trk_bitsync | ... }"];
@@ -14,9 +14,9 @@ digraph G
   acqmode [label = "{ struct acq_searchmode | ... }"];
   acqcfg [label = "{ struct acq_searchcfg | ... }"];
 
-  acqchan -> svchan -> acqchan;
-  trkchan -> svchan -> trkchan;
-  svchan -> acqmode -> acqcfg;
+  acqchan -> svctrl -> acqchan;
+  trkchan -> svctrl -> trkchan;
+  svctrl -> acqmode -> acqcfg;
   trkchan -> bitsync;
 }
 ```
