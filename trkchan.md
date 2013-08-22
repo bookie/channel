@@ -28,7 +28,7 @@ struct trk_channel
 };
 
 
-void trkchan_init(void);
+void trkchan_init(unsigned chansize);
 struct trk_channel *trkchan_deploy(struct sv_ctrl *svctrl);
 void trkchan_kill(struct trk_channel *trkchan);
 
