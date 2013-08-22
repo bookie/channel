@@ -1,6 +1,6 @@
 #Tracking Channel
 
-
+## Structure Diagram
 ```dot
 digraph G
 {
@@ -19,6 +19,7 @@ digraph G
 }
 ```
 
+## Declaration
 ```c
 struct trk_channel
 {
