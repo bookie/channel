@@ -12,11 +12,12 @@ digraph G
 
   acqchan [label = "{ struct acq_channel | ... }"];
   acqmode [label = "{ struct acq_searchmode | ... }"];
-  acqcfg [label = "{ struct acq_searchcfg | ... }"];
+  acqcfg [label = "{ struct acq_searchcfg | <searchcfg> | ... }"];
 
   acqchan -> svctrl -> acqchan;
   trkchan -> svctrl -> trkchan;
   svctrl -> acqmode -> acqcfg;
+  svctrl -> acqcfg:searchcfg
   trkchan -> bitsync;
 }
 ```
